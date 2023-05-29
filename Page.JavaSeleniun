@@ -1,0 +1,283 @@
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import java.awt.*;
+
+public class HomePage {
+    public static void main(String[] args){
+        System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe"); //Pentru a putea rula cu ajutorul App chrome
+
+        WebDriver chrome=new ChromeDriver();  https://www.sportisimo.ro/inregistrare/
+        chrome.get("https://www.sportisimo.ro/");
+        
+        chrome.manage().window().maximize(); // pentru maximizarea ferestrei
+        wait(1);
+
+        // Acceptare conditii
+
+        WebElement suntDeAcord=chrome.findElement(By.cssSelector("#didomi-notice-agree-button > span"));
+        suntDeAcord.click();
+        wait(1);
+
+        // Home page
+
+        WebElement incaltaminte=chrome.findElement(By.cssSelector("#cat_56501_link"));
+        incaltaminte.click();
+        wait(1);
+
+        WebElement imbracaminte=chrome.findElement(By.cssSelector("#cat_56503_link > strong"));
+        imbracaminte.click();
+        wait(1);
+
+        WebElement sporturi=chrome.findElement(By.cssSelector("#cat_56505_link > strong"));
+        sporturi.click();
+        wait(1);
+
+        WebElement accesoriiSiAlteArticole=chrome.findElement(By.cssSelector("#cat_56507_link > strong"));
+        accesoriiSiAlteArticole.click();
+        wait(1);
+
+        WebElement timpLiber=chrome.findElement(By.cssSelector("#cat_3768693477_link > strong"));
+        timpLiber.click();
+        wait(1);
+
+        WebElement barbati=chrome.findElement(By.cssSelector("#header > div.header__content > div.top_navigation > a:nth-child(2) > span"));
+        barbati.click();
+        wait(1);
+
+        WebElement femei=chrome.findElement(By.cssSelector("#header > div.header__content > div.top_navigation > a:nth-child(3) > span"));
+        femei.click();
+        wait(1);
+
+        WebElement copii=chrome.findElement(By.cssSelector("#header > div.header__content > div.top_navigation > a:nth-child(4) > span"));
+        copii.click();
+        wait(1);
+
+        WebElement cauta=chrome.findElement(By.cssSelector("#search_input"));
+        cauta.click();
+        wait(1);
+        cauta.sendKeys("The field works");
+        wait(1);
+
+        WebElement logo=chrome.findElement(By.cssSelector("#header_logo > picture > img"));
+        logo.click();
+        wait(1);
+
+        WebElement autentificare=chrome.findElement(By.cssSelector("#login_tab_link > p"));
+        autentificare.click();
+        wait(1);
+
+        WebElement contNou=chrome.findElement(By.cssSelector("#login_tab_cnt > div > div.tabs.secondary.center > ul > li:nth-child(2) > a"));
+        contNou.click();
+        wait(1);
+
+        // Register
+
+        WebElement email=chrome.findElement(By.cssSelector("#input_email"));
+        email.click();
+        email.clear();
+        email.sendKeys("matache.alex.ncs@gmail.com");
+        wait(1);
+
+        WebElement parola=chrome.findElement(By.cssSelector("#input_passwd"));
+        parola.click();
+        parola.sendKeys("123Matache123");
+        wait(1);
+
+        WebElement telefon=chrome.findElement(By.cssSelector("#input_tel"));
+        telefon.click();
+        telefon.sendKeys("772098607");
+        wait(1);
+        telefon.sendKeys(Keys.PAGE_DOWN);
+        wait(1);
+
+        WebElement prenume=chrome.findElement(By.cssSelector("#input_firstname"));
+        prenume.click();
+        prenume.sendKeys("Alexandru");
+        wait(1);
+
+        WebElement nume=chrome.findElement(By.cssSelector("#input_lastname"));
+        nume.click();
+        nume.sendKeys("Matache");
+        wait(1);
+
+        WebElement gen=chrome.findElement(By.cssSelector("#switch_sex_label1 > span"));
+        gen.click();
+        wait(1);
+
+        WebElement alegeJudet=chrome.findElement(By.cssSelector("#input_country_zone"));
+        alegeJudet.click();
+        wait(1);
+
+        WebElement ilfov=chrome.findElement(By.cssSelector("#input_country_zone"));
+        ilfov.click();
+        ilfov.sendKeys("Ilfov");
+        wait(1);
+
+        WebElement oras=chrome.findElement(By.cssSelector("#input_city"));
+        oras.click();
+        wait(1);
+
+        WebElement popesti=chrome.findElement(By.cssSelector("#input_city_search"));
+        popesti.click();
+        popesti.sendKeys("Popesti-Leordeni");
+        wait(1);
+
+        WebElement city=chrome.findElement(By.cssSelector("#whisperer_input_city > div.whisperer.open > div.whisperer__select > ul > li"));
+        city.click();
+        wait(1);
+
+        WebElement strada=chrome.findElement(By.xpath("//*[@id=\"input_street\"]"));
+        strada.click();
+        strada.sendKeys("Str.Drumul Fermei Nr.44");
+        strada.sendKeys(Keys.PAGE_DOWN);
+        wait(1);
+
+        WebElement codPostal=chrome.findElement(By.cssSelector("#input_postcode"));
+        codPostal.click();
+        codPostal.sendKeys("077160");
+        wait(1);
+
+        WebElement checkBox1=chrome.findElement(By.cssSelector("#account_reg_tab_popup > div > div > div.registration-box__cnt > form > div.form.form--agreement > div:nth-child(1) > div:nth-child(1) > label > i"));
+        checkBox1.click();
+        wait(1);
+
+        WebElement checkBox2=chrome.findElement(By.cssSelector("#account_reg_tab_popup > div > div > div.registration-box__cnt > form > div.form.form--agreement > div:nth-child(1) > div:nth-child(2) > label > i"));
+        checkBox2.click();
+        wait(1);
+
+        WebElement checkBox3=chrome.findElement(By.cssSelector("#account_reg_tab_popup > div > div > div.registration-box__cnt > form > div.form.form--agreement > div:nth-child(1) > div:nth-child(3) > label > i"));
+        checkBox3.click();
+        wait(1);
+        telefon.sendKeys(Keys.PAGE_UP);
+        wait(1);
+
+        WebElement logo1=chrome.findElement(By.cssSelector("#header_logo > picture > img"));
+        logo1.click();
+        wait(1);
+
+        // Autentificare
+
+        WebElement autentificare1=chrome.findElement(By.cssSelector("#login_tab_link > p"));
+        autentificare1.click();
+        wait(1);
+
+        WebElement email1=chrome.findElement(By.cssSelector("#input_login-menu-email"));
+        email1.click();
+        email1.sendKeys("matache.alex.ncs@gmail.com");
+        wait(1);
+
+        WebElement password1= chrome.findElement(By.cssSelector("#login_menu_password"));
+        password1.click();
+        password1.sendKeys("123Matache123");
+        wait(1);
+
+        WebElement autentificareButon= chrome.findElement(By.cssSelector("#login_tab_1_cnt > div > form > div > div:nth-child(4) > div > label"));
+        autentificareButon.click();
+        wait(1);
+
+        // Cautare produs
+
+        WebElement ceasCalypso= chrome.findElement(By.cssSelector("#search_input"));
+        ceasCalypso.click();
+        ceasCalypso.sendKeys("Calypso");
+        ceasCalypso.sendKeys(Keys.ENTER);
+        wait(1);
+
+        WebElement calypso= chrome.findElement(By.cssSelector("#qs_pb588681 > div.product-box__in > div.product-box__images > div > a > img"));
+        calypso.click();
+        wait(1);
+
+        WebElement culoareCeas= chrome.findElement(By.cssSelector("#slider_model_p588681_slide0 > div > img"));
+        culoareCeas.click();
+        wait(1);
+
+        WebElement adaugareInCos= chrome.findElement(By.cssSelector("#detail-button-variant-buy > div.variant__buttons--sticky-in > div:nth-child(1) > div.button.cart-added--no-mobile.text > label"));
+        adaugareInCos.click();
+        wait(1);
+
+        WebElement veziCos= chrome.findElement(By.cssSelector("#popup_add_to_cart_cnt > div > div > div > table.cart-added__buttons > tbody > tr > td.right > a.button.third"));
+        veziCos.click();
+        wait(1);
+
+        WebElement comanda= chrome.findElement(By.cssSelector("#body > div.layout.wide.checkout.shopping-cart > div.middle > div > div.content > div > div.cht__layout.clearfix > div.cht__bottom.cht__left > div > a"));
+        comanda.click();
+        wait(1);
+
+        WebElement dublareProdus= chrome.findElement(By.cssSelector("#input_move_cart2586875_plus"));
+        dublareProdus.click();
+        wait(1);
+
+        WebElement scadereProdus= chrome.findElement(By.cssSelector("#input_move_cart2586875_minus"));
+        scadereProdus.click();
+        wait(1);
+
+        WebElement codDeReducere= chrome.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[1]/div/form/div/div[2]/div[1]/div[3]/div/div/div[1]/label/i"));
+        codDeReducere.click();
+        wait(1);
+
+        WebElement codDeReducere1= chrome.findElement(By.cssSelector("#order_vouchers_cnt > div > table > tbody > tr > td:nth-child(1) > input"));
+        codDeReducere1.click();
+        codDeReducere1.sendKeys("DHQMX");
+        wait(1);
+
+        JavascriptExecutor js= (JavascriptExecutor) chrome;
+        js.executeScript("window.scrollBy(0,420)");
+        wait(1);
+        System.out.println("Scrolled down..");
+
+
+        WebElement altaAdres= chrome.findElement(By.cssSelector("#delivery_addresses > div.order-addresses__checkbox > label > i"));
+        altaAdres.click();
+        wait(1);
+        altaAdres.click();
+        wait(1);
+
+        WebElement modificareaModuluiDePlata= chrome.findElement(By.cssSelector("#\\32 -modalitate-de-plata > div.cht-table__cnt > div > div.order-modules__buttons > div > label"));
+        modificareaModuluiDePlata.click();
+        wait(1);
+
+        WebElement plataCuCardu= chrome.findElement(By.cssSelector("#order_payment_7 > div > table > tbody > tr > td.order-module__checkbox > label > i"));
+        plataCuCardu.click();
+        wait(1);
+
+        WebElement sundDeAcord= chrome.findElement(By.cssSelector("#agreement_table_cnt > div.order-agreement > div:nth-child(1) > label > i"));
+        sundDeAcord.click();
+        wait(1);
+
+        WebElement suntDeAcord1= chrome.findElement(By.cssSelector("#agreement_table_cnt > div.order-agreement > div:nth-child(2) > label > i"));
+        suntDeAcord1.click();
+        wait(1);
+
+        WebElement plaseazaComanda= chrome.findElement(By.cssSelector("#order_submit_button"));
+        plaseazaComanda.click();
+        wait(1);
+
+        WebElement logo2= chrome.findElement(By.cssSelector("#header_logo > picture > img"));
+        logo2.click();
+        wait(1);
+
+        // Anulare comanda
+
+        WebElement afiseazaComenzile= chrome.findElement(By.cssSelector("#body > div.layout > div.middle > div.section.section--alert > div > div.alert-bottom > a"));
+        afiseazaComenzile.click();
+        wait(1);
+
+        Actions act = new Actions(chrome);
+        act.moveByOffset(676, 410).click().build().perform();
+        wait(1);
+
+        WebElement anuleazacomanda= chrome.findElement(By.cssSelector("#content > div > div.ca-order__cancel > a"));
+        anuleazacomanda.click();
+        wait(1);
+
+        WebElement anule= chrome.findElement(By.cssSelector("#order_cancel_button_yes"));
+        anule.click();
+        wait(1);
+
+        // Inapoi in home page
+
+        WebElement logo4= chrome.findElement(By.cssSelector("#header_logo > picture > img"));
+        logo4.click();
+        wait(1);
